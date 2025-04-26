@@ -1,0 +1,48 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# プロジェクト開始プロンプト
+
+このプロンプトは新規プロジェクトの初期ディレクトリ構造をセットアップするためのものです。
+
+## 実行内容
+
+1. プロジェクト名を確認します
+2. WEBアプリ開発ワークフロープロンプトに基づいたディレクトリ構造を作成します
+3. README.mdファイルを空の状態で作成します
+
+## 実行手順
+
+```bash
+# プロジェクト名を確認
+echo "プロジェクト名を入力してください："
+read project_name
+
+# プロジェクトのルートディレクトリを作成
+mkdir -p "$project_name"
+
+# 各ディレクトリを作成
+mkdir -p "$project_name/00_プロジェクト管理"
+mkdir -p "$project_name/01_要件定義" 
+mkdir -p "$project_name/02_技術選定"
+mkdir -p "$project_name/03_プロジェクト計画"
+mkdir -p "$project_name/04_設計/01_画面設計"
+mkdir -p "$project_name/04_設計/02_機能設計"
+mkdir -p "$project_name/04_設計/03_データ設計"
+mkdir -p "$project_name/04_設計/04_セキュリティ設計"
+mkdir -p "$project_name/05_環境構築"
+mkdir -p "$project_name/06_運用"
+
+# README.mdファイルを作成
+touch "$project_name/README.md"
+
+echo "プロジェクト「$project_name」の初期ディレクトリ構造を作成しました。"
+```
+
+## 注意事項
+
+- 上記のディレクトリ構造はWEBアプリ開発ワークフロープロンプトに基づいています
+- 必要に応じて、プロジェクトの性質に合わせてディレクトリを追加・削除してください
+- 各ディレクトリ内のマークダウンファイルは、必要に応じて別途作成してください 
